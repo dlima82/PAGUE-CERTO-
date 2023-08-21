@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contador de Cervejas</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #f4f4f4;
+        }
+
+        .container {
+            text-align: center;
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+            width: 80%; /* Define a largura do container */
+            max-width: 400px; /* Limita a largura m xima */
+        }
+
+        .counter {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 20px;
+        }
+
+        button {
+            font-size: 18px;
+            padding: 10px 20px;
+            margin: 5px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            background-color: #007bff;
+            color: white;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        .beer-image {
+            max-width: 100px; /* Limita a largura da imagem */
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Contador de Cervejas</h1>
+        <p align="center"><img src="./2017071123523219508427.png" alt="cerveja" width="371" height="331" longdesc="http://cerveja"></p>
+        <div class="counter">
+            <p>Cervejas bebidas: <span id="count">0</span></p>
+            <button id="increment">+</button>
+            <button id="reset">Reset</button>
+        </div>
+    </div>
+    <script>
+        const countElement = document.getElementById('count');
+        const incrementButton = document.getElementById('increment');
+        const resetButton = document.getElementById('reset');
+
+        let count = 0;
+
+        incrementButton.addEventListener('click', () => {
+            count++;
+            countElement.textContent = count;
+        });
+
+        resetButton.addEventListener('click', () => {
+            count = 0;
+            countElement.textContent = count;
+        });
+    </script>
+
+
+</body></html>
