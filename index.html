@@ -1,223 +1,100 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Contador de Cervejas</title>
+    <title>Contador de Cervejas</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
-    <style type="text/css">
-<!--
-.style5 {font-weight: bold}
-.style6 {font-weight: bold}
-.style7 {font-weight: bold}
-.style8 {font-weight: bold}
-.style9 {font-weight: bold}
-.style10 {font-weight: bold}
-.style11 {font-weight: bold}
-.style12 {font-weight: bold}
-body,td,th {
-	font-weight: bold;
-}
-body {
+    <style>
+        /* Estilos personalizados */
+        .beer-image {
+            max-width: 200px;
+        }
+    .style17 {font-size: 36px}
+    .style18 {color: #006600}
+    .style19 {font-size: 24px}
+    body {
 	background-color: #999999;
 }
-.style14 {
-	color: #009900;
-	font-size: 50px;
-}
-.style15 {color: #FF0000}
-.container .mt-4 .text-center .style15 {
-}
-.style17 {font-size: 36px}
--->
-    </style>
+</style>
 <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"></head>
 <body>
-    <div class="container">
-        <h1 align="center" class="text-center">&nbsp;</h1>
-        <h1 align="center" class="text-center">&nbsp;</h1>
-        <h1 align="center" class="text-center"><a href="https://dlima82.github.io/paguecerto/" class="style15"></a></h1>
-        <h1 align="center" class="text-center">&nbsp;</h1>
-        <h1 align="center" class="text-center"><em><span class="container">PAGUE CERTO</span> <span class="style14">$</span></em></h1>
-        <h1 align="center" class="text-center"><em> </em></h1>
-        <div class="style9">
-          <div class="text-center">
-            <div align="center" class="style10">
-              <button id="increment" class="btn btn-primary btn-lg" style="font-size: 30px; padding: 50px;"> 
-                  <div align="justify">+</div>
-              </button>
-                    <button id="reset" class="btn btn-secondary btn-lg">Resetar</button>
-                    <p class="style17">Cervejas = <span id="count">0</span></p>
-            </div>
-          </div>
-      </div>
+<div class="container">
+    <h1 align="center" class="text-center"><em>PAGUE O CERTO </em> <span class="style18">$</span> </h1>
+        <div align="center"></div>
+    <div class="mt-4">
+      <p align="center" class="text-center style19">Cervejas: <span id="count">0</span></p>
+        <div class="text-center">
+            
+              <div align="center">
+                <button id="increment" class="btn btn-primary btn-lg" style="font-size: 50px; padding: 20px;">+</button>
+              </div>
+              <button id="reset" class="btn btn-secondary btn-lg">Resetar</button>
+        </div>
+    </div>
 
-        <hr align="center">
+    <hr align="center">
 
-        <div class="mt-4">
-            <h2 align="center" class="text-center"><a href="https://dlima82.github.io/paguecerto/" class="style15">ZERAR CONTA</a></h2>
-            <form>
-                <div class="mb-3">
-                    <label for="beerType1" class="form-label">
-                    <div align="center"><strong>CERVEJAS:</strong></div>
-                    <strong>
-                    </label>
-                    </strong>
-                    <div align="center"><strong>
+    <div class="mt-4">
+        <h2 align="center" class="text-center">Calculadora</h2>
+        <form>
+            <div class="mb-3">
+                <label for="beerType1" class="form-label">
+                    <div align="center">Valor da Cerveja:</div>
+                </label>
+                <div align="center">
                     <input type="number" class="form-control" id="beerType1" step="0.01" placeholder="Digite o valor">
-                      </strong></div>
+                  </div>
+            </div>
+            <div class="mb-3">
+                <label for="snackName" class="form-label">
+                    <div align="center">Outros:</div>
+                </label>
+                <div align="center">
+                    <input type="text" class="form-control" id="snackName" placeholder="Digite o nome">
+              </div>
+                <label for="snackType" class="form-label">
+                    <div align="center">Valor:</div>
+                </label>
+                <div align="center">
+                    <input type="number" class="form-control" id="snackType" step="0.01" placeholder="Digite o valor">
+                  </div>
+            </div>
+                <div align="center">
+                  <button type="button" id="addToTotal" class="btn btn-primary btn-calculate">Incluir Outros </button>
+                  <button type="button" id="calculateTotal" class="btn btn-primary btn-calculate">Calcular Total</button>
+                  <button type="button" id="generateReport" class="btn btn-success">Gerar Conta </button>
+                  <button type="button" id="clearAll" class="btn btn-danger">Limpar Tudo</button>
                 </div>
-                <div class="mb-3 style5">
-                    <label for="snackName1" class="form-label">
-                    <div align="center">Outros 1:</div>
-                    </label>
-                    <div align="center">
-                      <input type="text" class="form-control" id="snackName1" placeholder="Digite o nome">
-                    </div>
-                    <label for="snackType1" class="form-label">
-                    <div align="center">Valor  1:</div>
-                    </label>
-                    <div align="center">
-                      <input type="number" class="form-control" id="snackType1" step="0.01" placeholder="Digite o valor">
-                  </div>
+            <p align="center" class="mt-3 style17">Total a pagar: <span id="totalAmount">0.00</span></p>
+        </form>
+        <div class="mt-4">
+            <h2 align="center" class="text-center">Outros</h2>
+                <div align="center">
+                  <ul id="snackList" class="list-group">
+                  </ul>
                 </div>
-                <div class="mb-3 style6">
-                    <label for="snackName2" class="form-label">
-                    <div align="center">Outros 2:</div>
-                    </label>
-                    <div align="center">
-                      <input type="text" class="form-control" id="snackName2" placeholder="Digite o nome">
-                    </div>
-                    <label for="snackType2" class="form-label">
-                    <div align="center">Valor 2:</div>
-                    </label>
-                    <div align="center">
-                      <input type="number" class="form-control" id="snackType2" step="0.01" placeholder="Digite o valor">
-                  </div>
-              </div>
-                <div class="mb-3 style7">
-                    <label for="snackName3" class="form-label">
-                    <div align="center">Outros 3:</div>
-                    </label>
-                    <div align="center">
-                      <input type="text" class="form-control" id="snackName3" placeholder="Digite o nome">
-                    </div>
-                    <label for="snackType3" class="form-label">
-                    <div align="center">Valor  3:</div>
-                    </label>
-                    <div align="center">
-                      <input type="number" class="form-control" id="snackType3" step="0.01" placeholder="Digite o valor">
-                  </div>
-              </div>
-                <div class="mb-3 style8">
-                    <label for="snackName4" class="form-label">
-                    <div align="center">Outros 4:</div>
-                    </label>
-                    <div align="center">
-                      <input type="text" class="form-control" id="snackName4" placeholder="Digite o nome">
-                    </div>
-                    <label for="snackType4" class="form-label">
-                    <div align="center">Valor  4:</div>
-                    </label>
-                    <div align="center">
-                      <input type="number" class="form-control" id="snackType4" step="0.01" placeholder="Digite o valor">
-                  </div>
-              </div>
-                <div class="mb-3 style9">
-                    <label for="snackName5" class="form-label">
-                    <div align="center">Outros 5:</div>
-                    </label>
-                    <div align="center">
-                      <input type="text" class="form-control" id="snackName5" placeholder="Digite o nome">
-                    </div>
-                    <label for="snackType5" class="form-label">
-                    <div align="center">Valor  5:</div>
-                    </label>
-                    <div align="center">
-                      <input type="number" class="form-control" id="snackType5" step="0.01" placeholder="Digite o valor">
-                  </div>
-              </div>
-                <div class="mb-3 style10">
-                    <label for="snackName6" class="form-label">
-                    <div align="center">Outros 6:</div>
-                    </label>
-                    <div align="center">
-                      <input type="text" class="form-control" id="snackName6" placeholder="Digite o nome">
-                    </div>
-                    <label for="snackType6" class="form-label">
-                    <div align="center">Valor 6:</div>
-                    </label>
-                    <div align="center">
-                      <input type="number" class="form-control" id="snackType6" step="0.01" placeholder="Digite o valor">
-                  </div>
-              </div>
-                <div class="mb-3 style11">
-                    <label for="snackName7" class="form-label">
-                    <div align="center">Outros 7:</div>
-                    </label>
-                    <div align="center">
-                      <input type="text" class="form-control" id="snackName7" placeholder="Digite o nome">
-                    </div>
-                    <label for="snackType7" class="form-label">
-                    <div align="center">Valor 7:</div>
-                    </label>
-                    <div align="center">
-                      <input type="number" class="form-control" id="snackType7" step="0.01" placeholder="Digite o valor">
-                  </div>
-              </div>
-                <div class="mb-3 style12">
-                    <label for="snackName8" class="form-label">
-                    <div align="center">Outros 8:</div>
-                    </label>
-                    <div align="center">
-                      <input type="text" class="form-control" id="snackName8" placeholder="Digite o nome">
-                    </div>
-                    <label for="snackType8" class="form-label">
-                    <div align="center">Valor  8:</div>
-                    </label>
-                    <div align="center">
-                      <input type="number" class="form-control" id="snackType8" step="0.01" placeholder="Digite o valor">
-                  </div>
-              </div>
-                <div align="center"><strong>
-                <button type="button" id="calculateTotal" class="btn btn-primary btn-calculate">Calcular Total</button>
-                <button type="button" id="generateReport" class="btn btn-success">Gerar Relatório</button>
-                </strong></div>
-                <p align="center" class="mt-3 style17"><strong>Total a pagar = <span id="totalAmount">0.00</span></strong></p>
-            </form>
-      </div>
-</div>
+        </div>
+    </div>
+    </div>
     
-    <script>
+    <div align="center">
+      <script>
         const countElement = document.getElementById('count');
         const incrementButton = document.getElementById('increment');
         const resetButton = document.getElementById('reset');
         const beerType1Input = document.getElementById('beerType1');
-        const snackName1Input = document.getElementById('snackName1');
-        const snackType1Input = document.getElementById('snackType1');
-        const snackName2Input = document.getElementById('snackName2');
-        const snackType2Input = document.getElementById('snackType2');
-        const snackName3Input = document.getElementById('snackName3');
-        const snackType3Input = document.getElementById('snackType3');
-        const snackName4Input = document.getElementById('snackName4');
-        const snackType4Input = document.getElementById('snackType4');
-        const snackName5Input = document.getElementById('snackName5');
-        const snackType5Input = document.getElementById('snackType5');
-        const snackName6Input = document.getElementById('snackName6');
-        const snackType6Input = document.getElementById('snackType6');
-        const snackName7Input = document.getElementById('snackName7');
-        const snackType7Input = document.getElementById('snackType7');
-        const snackName8Input = document.getElementById('snackName8');
-        const snackType8Input = document.getElementById('snackType8');
+        const snackNameInput = document.getElementById('snackName');
+        const snackTypeInput = document.getElementById('snackType');
+        const addToTotalButton = document.getElementById('addToTotal');
         const calculateTotalButton = document.getElementById('calculateTotal');
         const generateReportButton = document.getElementById('generateReport');
+        const clearAllButton = document.getElementById('clearAll');
         const totalAmountElement = document.getElementById('totalAmount');
+        const snackList = document.getElementById('snackList');
 
         let count = 0;
-        let beerPrice1 = 0;
-        let snackName1 = '';
-        let snackPrice1 = 0;
+        let snacks = [];
 
         incrementButton.addEventListener('click', () => {
             count++;
@@ -229,22 +106,54 @@ body {
             countElement.textContent = count;
         });
 
+        addToTotalButton.addEventListener('click', () => {
+            const snackName = snackNameInput.value;
+            const snackPrice = parseFloat(snackTypeInput.value) || 0;
+
+            if (snackName && snackPrice > 0) {
+                snacks.push({ name: snackName, price: snackPrice });
+                updateSnackList();
+            }
+        });
+
         calculateTotalButton.addEventListener('click', () => {
-            beerPrice1 = parseFloat(beerType1Input.value) || 0;
-            snackName1 = snackName1Input.value;
-            snackPrice1 = parseFloat(snackType1Input.value) || 0;
-
+            const beerPrice1 = parseFloat(beerType1Input.value) || 0;
             const totalBeers = count * beerPrice1;
-            const totalSnacks = snackPrice1;
-            const totalAmount = (totalBeers + totalSnacks) * 1.1;
+            const totalSnacks = snacks.reduce((total, snack) => total + snack.price, 0);
+            const totalAmount = totalBeers + totalSnacks;
+            totalAmountElement.textContent = (totalAmount * 1.1).toFixed(2);
+        });
 
-            totalAmountElement.textContent = totalAmount.toFixed(2);
+        clearAllButton.addEventListener('click', () => {
+            count = 0;
+            snacks = [];
+            countElement.textContent = count;
+            snackNameInput.value = '';
+            snackTypeInput.value = '';
+            totalAmountElement.textContent = '0.00';
+            updateSnackList();
         });
 
         generateReportButton.addEventListener('click', () => {
-            const report = `Relatório Final\n\nCervejas bebidas: ${count}\nValor total das cervejas: R$ ${(count * beerPrice1).toFixed(2)}\noutros 1: ${snackName1} - R$ ${snackPrice1.toFixed(2)}\noutros 2: ${snackName2Input.value} - R$ ${snackType2Input.value}\noutros 3: ${snackName3Input.value} - R$ ${snackType3Input.value}\noutros 4: ${snackName4Input.value} - R$ ${snackType4Input.value}\noutros 5: ${snackName5Input.value} - R$ ${snackType5Input.value}\noutros 6: ${snackName6Input.value} - R$ ${snackType6Input.value}\noutros 7: ${snackName7Input.value} - R$ ${snackType7Input.value}\noutros 8: ${snackName8Input.value} - R$ ${snackType8Input.value}\nTotal a pagar: R$ ${totalAmountElement.textContent}`;
+            let snacksText = "";
+            snacks.forEach((snack, index) => {
+                snacksText += `${index + 1}. ${snack.name} - R$ ${snack.price}\n`;
+            });
+
+            const report = `Relatório Final\n\nCervejas bebidas: ${count}\nValor total das cervejas: R$ ${(count * parseFloat(beerType1Input.value)).toFixed(2)}\nTira-gostos incluídos:\n${snacksText}Total a pagar: R$ ${totalAmountElement.textContent}`;
             alert(report);
         });
+
+        function updateSnackList() {
+            snackList.innerHTML = "";
+            snacks.forEach((snack, index) => {
+                const listItem = document.createElement('li');
+                listItem.className = 'list-group-item';
+                listItem.textContent = `${index + 1}. ${snack.name} - R$ ${snack.price}`;
+                snackList.appendChild(listItem);
+            });
+        }
     </script>
+    </div>
 </body>
 </html>
