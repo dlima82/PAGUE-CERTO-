@@ -208,7 +208,7 @@
         });
 
         generateReportButton.addEventListener('click', () => {
-            const report = `Relatório Final\n\nCervejas bebidas: ${count}\nValor total das cervejas: R$ ${(count * beerPrice1).toFixed(2)}\nTira-gosto 1: ${snackName1} - R$ ${snackPrice1.toFixed(2)}\nTira-gosto 2: ${snackName2Input.value} - R$ ${snackType2Input.value}\nTira-gosto 3: ${snackName3Input.value} - R$ ${snackType3Input.value}\nTira-gosto 4: ${snackName4Input.value} - R$ ${snackType4Input.value}\nTira-gosto 5: ${snackName5Input.value} - R$ ${snackType5Input.value}\nTira-gosto 6: ${snackName6Input.value} - R$ ${snackType6Input.value}\nTira-gosto 7: ${snackName7Input.value} - R$ ${snackType7Input.value}\nTira-gosto 8: ${snackName8Input.value} - R$ ${snackType8Input.value}\nTotal a pagar: R$ ${totalAmountElement.textContent}`;
+            const report = `Relatório Final\n\nCervejas bebidas: ${count}\nValor total das cervejas: R$ ${(count * beerPrice1).toFixed(2)}\noutros 1: ${snackName1} - R$ ${snackPrice1.toFixed(2)}\noutros 2: ${snackName2Input.value} - R$ ${snackType2Input.value}\noutros 3: ${snackName3Input.value} - R$ ${snackType3Input.value}\noutros 4: ${snackName4Input.value} - R$ ${snackType4Input.value}\noutros 5: ${snackName5Input.value} - R$ ${snackType5Input.value}\noutros 6: ${snackName6Input.value} - R$ ${snackType6Input.value}\noutros 7: ${snackName7Input.value} - R$ ${snackType7Input.value}\noutros 8: ${snackName8Input.value} - R$ ${snackType8Input.value}\nTotal a pagar: R$ ${totalAmountElement.textContent}`;
             alert(report);
         });
     </script>
