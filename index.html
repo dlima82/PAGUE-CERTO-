@@ -1,75 +1,115 @@
 <!DOCTYPE html>
-<html lang="en"><head>
-<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<html lang="en">
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contador de Cervejas</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            background-color: #f4f4f4;
-        }
-
-        .container {
-            text-align: center;
-            background-color: #ffffff;
-            padding: 20px;
-            border-radius: 5px;
-            box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
-            width: 80%; /* Define a largura do container */
-            max-width: 400px; /* Limita a largura m xima */
-        }
-
-        .counter {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            margin-top: 20px;
-        }
-
-        button {
-            font-size: 18px;
-            padding: 10px 20px;
-            margin: 5px;
-            cursor: pointer;
-            border: none;
-            border-radius: 5px;
-            background-color: #007bff;
-            color: white;
-        }
-
-        button:hover {
-            background-color: #0056b3;
-        }
-
-        .beer-image {
-            max-width: 100px; /* Limita a largura da imagem */
-            margin-bottom: 10px;
-        }
-    </style>
+<title>Contador de Cervejas</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
 </head>
 <body>
     <div class="container">
-        <h1>Contador de Cervejas</h1>
-        <p align="center"><img src="./2017071123523219508427.png" alt="cerveja" width="371" height="331" longdesc="http://cerveja"></p>
-        <div class="counter">
-            <p>Cervejas bebidas: <span id="count">0</span></p>
-            <button id="increment">+</button>
-            <button id="reset">Reset</button>
+        <h1 class="text-center"><img src="contarcervejas/2017071123523219508427.png" alt="Cerveja" width="345" height="290" class="beer-image img-fluid d-block mx-auto">        </h1>
+        <div class="mt-4">
+            <p class="text-center">Cervejas bebidas: <span id="count">0</span></p>
+            <div class="text-center">
+                <button id="increment" class="btn btn-primary">+</button>
+                <button id="reset" class="btn btn-secondary">Reset</button>
+            </div>
+        </div>
+
+        <hr>
+
+        <div class="mt-4">
+            <h2 class="text-center">PAGUE CERTO $ </h2>
+            <form>
+                <div class="mb-3">
+                    <label for="beerType1" class="form-label"><strong>CERVEJAS</strong>:</label>
+                    <input type="number" class="form-control" id="beerType1" step="0.01" placeholder="Digite o valor">
+                </div>
+                <div class="mb-3">
+                    <label for="snackName1" class="form-label">Outros 1:</label>
+                    <input type="text" class="form-control" id="snackName1" placeholder="Digite o nome">
+                    <label for="snackType1" class="form-label">Valor  1:</label>
+                    <input type="number" class="form-control" id="snackType1" step="0.01" placeholder="Digite o valor">
+                </div>
+                <div class="mb-3">
+                    <label for="snackName2" class="form-label">Outros 2:</label>
+                    <input type="text" class="form-control" id="snackName2" placeholder="Digite o nome">
+                    <label for="snackType2" class="form-label">Valor 2:</label>
+                    <input type="number" class="form-control" id="snackType2" step="0.01" placeholder="Digite o valor">
+              </div>
+                <div class="mb-3">
+                    <label for="snackName3" class="form-label">Outros 3:</label>
+                    <input type="text" class="form-control" id="snackName3" placeholder="Digite o nome">
+                    <label for="snackType3" class="form-label">Valor  3:</label>
+                    <input type="number" class="form-control" id="snackType3" step="0.01" placeholder="Digite o valor">
+              </div>
+                <div class="mb-3">
+                    <label for="snackName4" class="form-label">Outros 4:</label>
+                    <input type="text" class="form-control" id="snackName4" placeholder="Digite o nome">
+                    <label for="snackType4" class="form-label">Valor  4:</label>
+                    <input type="number" class="form-control" id="snackType4" step="0.01" placeholder="Digite o valor">
+              </div>
+                <div class="mb-3">
+                    <label for="snackName5" class="form-label">Outros 5:</label>
+                    <input type="text" class="form-control" id="snackName5" placeholder="Digite o nome">
+                    <label for="snackType5" class="form-label">Valor  5:</label>
+                    <input type="number" class="form-control" id="snackType5" step="0.01" placeholder="Digite o valor">
+              </div>
+                <div class="mb-3">
+                    <label for="snackName6" class="form-label">Outros 6:</label>
+                    <input type="text" class="form-control" id="snackName6" placeholder="Digite o nome">
+                    <label for="snackType6" class="form-label">Valor 6:</label>
+                    <input type="number" class="form-control" id="snackType6" step="0.01" placeholder="Digite o valor">
+              </div>
+                <div class="mb-3">
+                    <label for="snackName7" class="form-label">Outros 7:</label>
+                    <input type="text" class="form-control" id="snackName7" placeholder="Digite o nome">
+                    <label for="snackType7" class="form-label">Valor 7:</label>
+                    <input type="number" class="form-control" id="snackType7" step="0.01" placeholder="Digite o valor">
+              </div>
+                <div class="mb-3">
+                    <label for="snackName8" class="form-label">Outros 8:</label>
+                    <input type="text" class="form-control" id="snackName8" placeholder="Digite o nome">
+                    <label for="snackType8" class="form-label">Valor  8:</label>
+                    <input type="number" class="form-control" id="snackType8" step="0.01" placeholder="Digite o valor">
+              </div>
+                <button type="button" id="calculateTotal" class="btn btn-primary btn-calculate">Calcular Total</button>
+                <button type="button" id="generateReport" class="btn btn-success">Gerar Relatório</button>
+                <p class="mt-3">Total a pagar: <span id="totalAmount">0.00</span></p>
+            </form>
         </div>
     </div>
+    
     <script>
         const countElement = document.getElementById('count');
         const incrementButton = document.getElementById('increment');
         const resetButton = document.getElementById('reset');
+        const beerType1Input = document.getElementById('beerType1');
+        const snackName1Input = document.getElementById('snackName1');
+        const snackType1Input = document.getElementById('snackType1');
+        const snackName2Input = document.getElementById('snackName2');
+        const snackType2Input = document.getElementById('snackType2');
+        const snackName3Input = document.getElementById('snackName3');
+        const snackType3Input = document.getElementById('snackType3');
+        const snackName4Input = document.getElementById('snackName4');
+        const snackType4Input = document.getElementById('snackType4');
+        const snackName5Input = document.getElementById('snackName5');
+        const snackType5Input = document.getElementById('snackType5');
+        const snackName6Input = document.getElementById('snackName6');
+        const snackType6Input = document.getElementById('snackType6');
+        const snackName7Input = document.getElementById('snackName7');
+        const snackType7Input = document.getElementById('snackType7');
+        const snackName8Input = document.getElementById('snackName8');
+        const snackType8Input = document.getElementById('snackType8');
+        const calculateTotalButton = document.getElementById('calculateTotal');
+        const generateReportButton = document.getElementById('generateReport');
+        const totalAmountElement = document.getElementById('totalAmount');
 
         let count = 0;
+        let beerPrice1 = 0;
+        let snackName1 = '';
+        let snackPrice1 = 0;
 
         incrementButton.addEventListener('click', () => {
             count++;
@@ -80,7 +120,23 @@
             count = 0;
             countElement.textContent = count;
         });
+
+        calculateTotalButton.addEventListener('click', () => {
+            beerPrice1 = parseFloat(beerType1Input.value) || 0;
+            snackName1 = snackName1Input.value;
+            snackPrice1 = parseFloat(snackType1Input.value) || 0;
+
+            const totalBeers = count * beerPrice1;
+            const totalSnacks = snackPrice1;
+            const totalAmount = (totalBeers + totalSnacks) * 1.1;
+
+            totalAmountElement.textContent = totalAmount.toFixed(2);
+        });
+
+        generateReportButton.addEventListener('click', () => {
+            const report = `Relatório Final\n\nCervejas bebidas: ${count}\nValor total das cervejas: R$ ${(count * beerPrice1).toFixed(2)}\nTira-gosto 1: ${snackName1} - R$ ${snackPrice1.toFixed(2)}\nTira-gosto 2: ${snackName2Input.value} - R$ ${snackType2Input.value}\nTira-gosto 3: ${snackName3Input.value} - R$ ${snackType3Input.value}\nTira-gosto 4: ${snackName4Input.value} - R$ ${snackType4Input.value}\nTira-gosto 5: ${snackName5Input.value} - R$ ${snackType5Input.value}\nTira-gosto 6: ${snackName6Input.value} - R$ ${snackType6Input.value}\nTira-gosto 7: ${snackName7Input.value} - R$ ${snackType7Input.value}\nTira-gosto 8: ${snackName8Input.value} - R$ ${snackType8Input.value}\nTotal a pagar: R$ ${totalAmountElement.textContent}`;
+            alert(report);
+        });
     </script>
-
-
-</body></html>
+</body>
+</html>
