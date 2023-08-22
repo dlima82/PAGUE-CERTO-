@@ -9,8 +9,16 @@
 <!--
 .style1 {
 	color: #FF9900;
-	font-size: 45px;
+	font-size: 60px;
 }
+.style5 {font-weight: bold}
+.style6 {font-weight: bold}
+.style7 {font-weight: bold}
+.style8 {font-weight: bold}
+.style9 {font-weight: bold}
+.style10 {font-weight: bold}
+.style11 {font-weight: bold}
+.style12 {font-weight: bold}
 -->
     </style>
 </head>
@@ -20,6 +28,7 @@
         <h1 align="center" class="text-center style1"><strong>PAGUE CERTO $ </strong></h1>
         <h1 align="center" class="text-center">&nbsp;</h1>
         <h1 align="center" class="text-center">Cervejas bebidas: <span id="count">0</span></h1>
+        <p align="center" class="text-center">08/22/2023 1:00 PM</p>
         <div class="mt-4">
           <div class="text-center">
                 <div align="center">
@@ -36,13 +45,15 @@
             <form>
                 <div class="mb-3">
                     <label for="beerType1" class="form-label">
-                    <div align="center"><strong>CERVEJAS</strong>:</div>
+                    <div align="center"><strong>CERVEJAS:</strong></div>
+                    <strong>
                     </label>
-                    <div align="center">
-                      <input type="number" class="form-control" id="beerType1" step="0.01" placeholder="Digite o valor">
-                        </div>
+                    </strong>
+                    <div align="center"><strong>
+                    <input type="number" class="form-control" id="beerType1" step="0.01" placeholder="Digite o valor">
+                      </strong></div>
                 </div>
-                <div class="mb-3">
+                <div class="mb-3 style5">
                     <label for="snackName1" class="form-label">
                     <div align="center">Outros 1:</div>
                     </label>
@@ -56,7 +67,7 @@
                       <input type="number" class="form-control" id="snackType1" step="0.01" placeholder="Digite o valor">
                         </div>
                 </div>
-                <div class="mb-3">
+                <div class="mb-3 style6">
                     <label for="snackName2" class="form-label">
                     <div align="center">Outros 2:</div>
                     </label>
@@ -70,7 +81,7 @@
                       <input type="number" class="form-control" id="snackType2" step="0.01" placeholder="Digite o valor">
                           </div>
               </div>
-                <div class="mb-3">
+                <div class="mb-3 style7">
                     <label for="snackName3" class="form-label">
                     <div align="center">Outros 3:</div>
                     </label>
@@ -84,7 +95,7 @@
                       <input type="number" class="form-control" id="snackType3" step="0.01" placeholder="Digite o valor">
                           </div>
               </div>
-                <div class="mb-3">
+                <div class="mb-3 style8">
                     <label for="snackName4" class="form-label">
                     <div align="center">Outros 4:</div>
                     </label>
@@ -98,7 +109,7 @@
                       <input type="number" class="form-control" id="snackType4" step="0.01" placeholder="Digite o valor">
                           </div>
               </div>
-                <div class="mb-3">
+                <div class="mb-3 style9">
                     <label for="snackName5" class="form-label">
                     <div align="center">Outros 5:</div>
                     </label>
@@ -112,7 +123,7 @@
                       <input type="number" class="form-control" id="snackType5" step="0.01" placeholder="Digite o valor">
                           </div>
               </div>
-                <div class="mb-3">
+                <div class="mb-3 style10">
                     <label for="snackName6" class="form-label">
                     <div align="center">Outros 6:</div>
                     </label>
@@ -126,7 +137,7 @@
                       <input type="number" class="form-control" id="snackType6" step="0.01" placeholder="Digite o valor">
                           </div>
               </div>
-                <div class="mb-3">
+                <div class="mb-3 style11">
                     <label for="snackName7" class="form-label">
                     <div align="center">Outros 7:</div>
                     </label>
@@ -140,7 +151,7 @@
                       <input type="number" class="form-control" id="snackType7" step="0.01" placeholder="Digite o valor">
                           </div>
               </div>
-                <div class="mb-3">
+                <div class="mb-3 style12">
                     <label for="snackName8" class="form-label">
                     <div align="center">Outros 8:</div>
                     </label>
@@ -154,11 +165,11 @@
                       <input type="number" class="form-control" id="snackType8" step="0.01" placeholder="Digite o valor">
                           </div>
               </div>
-                <div align="center">
-                  <button type="button" id="calculateTotal" class="btn btn-primary btn-calculate">Calcular Total</button>
-                  <button type="button" id="generateReport" class="btn btn-success">Gerar Relatório</button>
-                </div>
-                <p align="center" class="mt-3">Total a pagar: <span id="totalAmount">0.00</span></p>
+                <div align="center"><strong>
+                <button type="button" id="calculateTotal" class="btn btn-primary btn-calculate">Calcular Total</button>
+                <button type="button" id="generateReport" class="btn btn-success">Gerar Relatório</button>
+                </strong></div>
+                <p align="center" class="mt-3"><strong>Total a pagar: <span id="totalAmount">0.00</span></strong></p>
             </form>
         </div>
 </div>
