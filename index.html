@@ -46,14 +46,14 @@
             </div>
             <div class="mb-3">
                 <label for="snackName" class="form-label">
-                    <div align="center">Outros:</div>
-                </label>
+                    <div align="center" class="style19">Outros:</div>
+                    </label>
                 <div align="center">
                     <input type="text" class="form-control" id="snackName" placeholder="Digite o nome">
               </div>
                 <label for="snackType" class="form-label">
-                    <div align="center">Valor:</div>
-                </label>
+                    <div align="center"></div>
+                    </label>
                 <div align="center">
                     <input type="number" class="form-control" id="snackType" step="0.01" placeholder="Digite o valor">
                   </div>
@@ -139,7 +139,7 @@
                 snacksText += `${index + 1}. ${snack.name} - R$ ${snack.price}\n`;
             });
 
-            const report = `Relatório Final\n\nCervejas bebidas: ${count}\nValor total das cervejas: R$ ${(count * parseFloat(beerType1Input.value)).toFixed(2)}\nTira-gostos incluídos:\n${snacksText}Total a pagar: R$ ${totalAmountElement.textContent}`;
+            const report = `Relatório Final\n\nCervejas bebidas: ${count}\nValor total das cervejas: R$ ${(count * parseFloat(beerType1Input.value)).toFixed(2)}\:\n${snacksText}Total a pagar: R$ ${totalAmountElement.textContent}`;
             alert(report);
         });
 
